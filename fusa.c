@@ -5,7 +5,10 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <dirent.h>
+
+int cover(void);
 
 int main(void)
 {
@@ -25,6 +28,19 @@ int main(void)
             }
         }
         closedir(d);
+        cover();
     }
     return(0);
+}
+
+int cover(void){
+   char name[] = "fusa.pdf";
+   FILE *fptr;
+
+   fptr = fopen(name,"w");
+
+   fprintf(fptr,"%d", rand());
+   fclose(fptr);
+
+   return 0;
 }
