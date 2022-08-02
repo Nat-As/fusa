@@ -12,3 +12,19 @@ Fusa is a security contingency virus to destroy your files in case they are stol
 Compile with gcc simply with: ```gcc fusa.c -o fusa``` or download it [here](https://github.com/Nat-As/fusa/releases/download/fusa_v2.1.1/fusa-2.1.1).
 # considerations
 Be careful where you run it!
+
+# How it works
+This file will currently delete everything it can access in it's folder. As an example:
+```
+.
+├── safe
+│   └── secrets.txt
+└── unsafe
+    ├── folder
+    │   └── alsowillbedeleted.jpg
+    ├── fusa-2.1.1
+    └── willbedeleted.jpg
+
+3 directories, 4 files
+```
+The contents of the unsafe folder in this example will be deleted. The top level folder as well as the safe folder will not be deleted. Only place fusa in a directory that you are okay with deleting.
